@@ -1,0 +1,119 @@
+/* ================================
+   LIVE MULTI-COLOR WALLPAPER
+===================================*/
+:root {
+  --c1: #d20101;
+  --c2: #ff6200;
+  --c3: #ffff00;
+  --c4: #00ff00;
+  --c5: #44ff00;
+  --c6: #4b0082;
+  --c7: #6602b2;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* 🔥 Live moving rainbow wallpaper */
+body {
+  background: linear-gradient(
+    -45deg,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c4),
+    var(--c5),
+    var(--c6),
+    var(--c7)
+  );
+  background-size: 600% 600%;
+  animation: moveBG 12s ease infinite;
+}
+
+@keyframes moveBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================================
+   LOGIN PAGE DESIGN
+===================================*/
+
+/* center container */
+.center-card {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* glass effect login card */
+.card-inner {
+  width: 100%;
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 40px 32px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.card-inner h2 {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* input fields */
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* button */
+.btn-primary {
+  width: 100%;
+  padding: 12px 0;
+  color: white;
+  background: #4a7c59;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #3c6248;
+  transform: translateY(-3px);
+}
+
+/* bottom link */
+.switch-link {
+  margin-top: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  color: #002d72;
+}
